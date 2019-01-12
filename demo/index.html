@@ -22,9 +22,11 @@
       <h3>Basic examen-element demo</h3>
       <demo-snippet>
         <template>
-          <examen-element ></examen-element>
+          <examen-element on-message-change="change"></examen-element>
           <script>
-  
+            const change = ()=>{
+              console.log(change);
+            }
           </script>
         </template>
       </demo-snippet>

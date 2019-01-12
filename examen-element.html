@@ -9,11 +9,13 @@
       }
     </style>
     <h2>Examen [[title]]!</h2>
-    <iron-input bind-value="{{message}}">
-      <input value="{{value::message}}">
+    <label>first message</label><iron-input bind-value="{{message}}">
+       <input>
     </iron-input>
+    <br>
+    <label>Second message</label>
     <iron-input bind-value="{{paragrafh}}">
-      <input value="{{value::paragrafh}}">
+      <input>
     </iron-input>
     
     <p>the first messages is : {{message}}</p>
@@ -62,13 +64,6 @@
         console.log(this.paragrafh);
       }
 
-      changeMind(event){
-        this.dispatchEvent(new CustomEvent('user-change',{
-          bubbles:false,
-          composed:false,
-          detail: this.paragrafh
-        }));
-      }
     }
 
     window.customElements.define(ExamenElement.is, ExamenElement);
